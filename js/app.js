@@ -143,7 +143,7 @@ function returnPassageNextCoords(i, j) {
     return { i: i, j: j };
 }
 function ballCollected() {
-    var audio = new Audio('./sounds/ding.wav');
+    var audio = new Audio('../sounds/ding.wav');
     audio.play();
     gBallsCollectedCount++;
     var elBallsSelectedCountSpan = document.querySelector('.balls-collected span');
