@@ -11,8 +11,8 @@ body {
 }
 
 .cell img {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: auto;
 }
 
 .floor {
@@ -26,8 +26,6 @@ body {
 table {
     margin: auto;
 }
-
-
 
 .game-over {
     width: 350px;
@@ -67,13 +65,6 @@ button {
     width:fit-content;
 }
 
-.modal {
-    background-color: lightseagreen;
-    top: 10px;
-    right: 10px;
-    padding: 5px;
-    width: 300px;
-}
 
 .hide {
     display: none;
