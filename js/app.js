@@ -24,6 +24,9 @@ function init() {
     gGluedCellPos = null;
     gGamerPos = { i: 2, j: 9 };
 
+    var elBallsSelectedCountSpan = document.querySelector('.balls-collected span');
+    elBallsSelectedCountSpan.innerText = 0;
+
     gBoard = buildBoard();
     renderBoard(gBoard);
 
@@ -140,7 +143,7 @@ function returnPassageNextCoords(i, j) {
     return { i: i, j: j };
 }
 function ballCollected() {
-    var audio = new Audio('../img/charm.mp3');
+    var audio = new Audio('../sounds/ding.wav');
     audio.play();
     gBallsCollectedCount++;
     var elBallsSelectedCountSpan = document.querySelector('.balls-collected span');
@@ -201,9 +204,6 @@ function gameOver() {
     clearInterval(gAddGlueInterval);
     gAddBallInterval = null;
     gAddGlueInterval = null;
-
-    var elBallsSelectedCountSpan = document.querySelector('.balls-collected span');
-    elBallsSelectedCountSpan.innerText = 0;
 
     var elGameOver = document.querySelector('.game-over');
     elGameOver.classList.remove('hide');
